@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Cosinus">
+  	<meta name="keywords" content="cosinus">
+  	<meta name="author" content="Jordi Roca Bonnín">
+	<title>Funció Cosinus</title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylessheetfunctions.css">
+</head>
+<body>
+	<div class="row">
+	<div class="col-sm-12 my-3">
+	<div class="h1 text-center">Funció Cosinus</div>
+	</div>
+	</div>
+		<nav class="navbar navbar-expand-lg navbar-light color-nav mx-3">
+	  <a class="navbar-brand" href="#"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav mx-2">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="funcions_trigonometriques.html">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="sinus.html">Sinus</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link disabled" href="cosinus.html">Cosinus</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="tangent.html">Tangent</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+<div class="container my-5">
+	<div class="row">
+		<div class="col-sm-9"><iframe src="https://www.desmos.com/calculator/ms5n8tfsds?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+
+		<div class="col-sm-3">El cosinus és la relació entre la hipotenusa i la longitud del catet contigu del  mateix triangle rectangle. <br><br><div class="bold">Fórmula cosinus:</div><img src="cos_formula.svg">
+<br>
+	<form>
+	<label for="catet_con">Catet contigu:</label>
+	<input type="number" id="catet_con" name="Catet_contigu" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
+<br>
+
+	<label for="hipotenusa">Hipotenusa:</label>
+	<input type="number" id="hipotenusa" name="Hipotenusa" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
+
+<br>	
+	<input type="button" id="submit" name="submit" onclick = "cosinus(document.getElementById('catet_con').value, document.getElementById('hipotenusa').value)" value="Submit">
+	</form>
+	<br>
+	<div id="resultat">Aquí es mostra el resultat</div>
+
+
+	</div>
+		
+	
+</div>
+	<script type="text/javascript" src="trigonometric_functions.js"></script>
+</body>
+</html>

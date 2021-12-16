@@ -1,0 +1,11 @@
+.bold{font-weight: bold;}
+.color-cards{background-color: #e6f1ff; border: 3px #a35656 dotted;}
+.color-nav{background-color: #e6f1ff; border: 2px #b55959 solid;}
+input[type="number"]{
+  text-align: center;
+  color: white;
+  background-color: #4f4a4c;
+	border-radius: 8px;
+  size: 10px;
+	font-family: 'Shippori Antique B1', sans-serif;
+}
