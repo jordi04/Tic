@@ -25,7 +25,7 @@
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav mx-2">
 	      <li class="nav-item active">
-	        <a class="nav-link" href="funcions_trigonometriques.html">Home</a>
+	        <a class="nav-link" href="index.html">Home</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link disabled" href="sinus.html">Sinus</a>
@@ -40,36 +40,41 @@
 	  </div>
 	</nav>
 	
+<div class="container my-5 justify-content-center">
+	<div class="row">
+		<div class="col-sm-12"><iframe src="https://www.desmos.com/calculator/0r7kyicqyy?embed" width="1300" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+	</div>	
+</div>
+
 <div class="container my-5">
 	<div class="row">
-		<div class="col-sm-9"><iframe src="https://www.desmos.com/calculator/0r7kyicqyy?embed" width="800" height="400" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+		<div class="col-sm-6">El sinus és la relació entre la hipotenusa i la longitud del catet oposat del  mateix triangle rectangle.<br><br><div class="bold">Fórmula sinus:</div><img src="sinus_formula.svg"></div>
+		<br>
 		
+		<div class="col-sm-6">
+		<table class="table">
+		<form>
+			<td><label for="catet_oposat">Catet oposat:</label>
+			<input type="number" id="catet_oposat" name="Catet_oposat" placeholder="Cat" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+		<br>
 
-<div class="col-sm-3">El sinus és la relació entre la hipotenusa i la longitud del catet oposat del  mateix triangle rectangle.<br><br><div class="bold">Fórmula sinus:</div><img src="sinus_formula.svg">
-<br>
+			<td><label for="hipotenusa">Hipotenusa:</label>
+				<input type="number" id="hipotenusa" name="Hipotenusa" placeholder="Hip" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+		<br>
+			
+			<td><input type="button" id="submit" class="button" name="submit" onclick = "sinus(document.getElementById('catet_oposat').value, document.getElementById('hipotenusa').value)" value="Calcula"></td>
+		</form>
 
-
-<form>
-	<label for="catet_oposat">Catet oposat:</label>
-	<input type="number" id="catet_oposat" name="Catet_oposat" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
-<br>
-
-	<label for="hipotenusa">Hipotenusa:</label>
-	<input type="number" id="hipotenusa" name="Hipotenusa" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
-<br>
-	
-	<input type="button" id="submit" name="submit" onclick = "sinus(document.getElementById('catet_oposat').value, document.getElementById('hipotenusa').value)" value="Submit">
-</form>
-<br>
-<div id="resultat">Aquí es mostra el resultat</div>
-
+		</table>
+		<br>
+		<div class="resultat" id="resultat" style="width: 100%" >Aquí es mostra el resultat</div>
 
 
+
+	</div>
 </div>
 
-
-</div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="trigonometric_functions.js"></script>
 	
 </body>

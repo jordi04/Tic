@@ -17,15 +17,15 @@
 	<div class="h1 text-center">Funció Tangent</div>
 	</div>
 	</div>
-		<nav class="navbar navbar-expand-lg navbar-light color-nav mx-3">
+	<nav class="navbar navbar-expand-lg navbar-light color-nav mx-3">
 	  <a class="navbar-brand" href="#"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarNav">
 	    <ul class="navbar-nav mx-2">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="funcions_trigonometriques.html">Home</a>
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html">Home</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="sinus.html">Sinus</a>
@@ -40,34 +40,39 @@
 	  </div>
 	</nav>
 <div class="container my-5">
+	<div class="row justify-content-center">
+		<div class="col-sm-12"><iframe src="https://www.desmos.com/calculator/mb39rlzhvq?embed" width="1300px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+	
+	</div>
+</div>
+<div class="container my-5">
 	<div class="row">
-		<div class="col-sm-6"><iframe src="https://www.desmos.com/calculator/mb39rlzhvq?embed" width="400" height="250" style="border: 1px solid #ccc" frameborder=0></iframe></div>
+		<div class="col-sm-6">La tangent és la relació entre la longitud del catet contigu i la longitud del catet oposat del  mateix triangle rectangle. <br><br><div class="bold">Fórmula tangent:</div><img src="tangent_formula.svg"></div>
 	
-	<div class="col-sm-3">La tangent és la relació entre la longitud del catet contigu i la longitud del catet oposat del  mateix triangle rectangle. <br><br><div class="bold">Fórmula tangent:</div><img src="tangent_formula.svg">
+		<div class="col-sm-6">
+			<table class="table">
+			<form>
+	
+				<td><label for="catet_op">Catet oposat:</label>
+				<input type="number" id="catet_op" name="catet_op" placeholder="Cat-O" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+
+				
+			<br>
+				<td><label for="catet_con">Catet contigu:</label>
+				<input type="number" id="catet_con" name="Catet_contigu" placeholder="Cat-C" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+				
+			<br>
+				<td><input type="button" class="button" id="submit" name="submit" onclick = "tangent(document.getElementById('catet_con').value, document.getElementById('catet_op').value)" value="Calcula"></td>
+				</form>
+			</table>
+		<br>
+		<div class="resultat" id="resultat">Aquí es mostra el resultat</div>
+		</div>
+		</div>
+	</div>	
 </div>
-
-<div class="col-sm-3">
-	<form>
 	
-	<label for="catet_op">Catet oposat:</label>
-	<input type="number" id="catet_op" name="catet_op" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
-
-	
-<br>
-	<label for="catet_con">Catet contigu:</label>
-	<input type="number" id="catet_con" name="Catet_contigu" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;">
-	
-<br>
-	<input type="button" class="text-center"id="submit" name="submit" onclick = "tangent(document.getElementById('catet_con').value, document.getElementById('catet_op').value)" value="Submit">
-	</form>
-	<br>
-	<div id="resultat">Aquí es mostra el resultat</div>
-
-
-
-</div>
-	
-</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="trigonometric_functions.js"></script>
 </body>
 </html>

@@ -1,11 +1,43 @@
 .bold{font-weight: bold;}
 .color-cards{background-color: #e6f1ff; border: 3px #a35656 dotted;}
 .color-nav{background-color: #e6f1ff; border: 2px #b55959 solid;}
+h1 { color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+h2 { color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center; }
+/* p { color: #685206; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 24px; margin: 0 0 24px; text-align: center; } */
+
+.resultat {
+  border-radius: 25px;
+
+  background: #e6f1ff;
+  padding: 20px;
+  width:auto;
+  height:auto;
+  text-align: center;
+  position:relative;
+
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border-radius: 5px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.table{
+  border: none;
+  padding: 10px;
+  border-spacing: 30px;
+}
+
 input[type="number"]{
   text-align: center;
-  color: white;
-  background-color: #4f4a4c;
+  color: rgb(34, 34, 34);
+  background-color: #e6f1ff;
 	border-radius: 8px;
-  size: 10px;
+  size: 100px;
 	font-family: 'Shippori Antique B1', sans-serif;
 }
