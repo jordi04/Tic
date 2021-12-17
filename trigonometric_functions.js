@@ -36,7 +36,7 @@ function tangent(cat_con, cat_op){
 	resultat = cat_con/cat_op;
 	console.log(resultat);
 	console.log(cat_con, cat_op);
-
+	console.log(cat_con);
 	resultat = parseFloat(resultat).toFixed(2);
 	resultat = "La tangent és: "+ resultat;
 	document.getElementById('resultat').innerHTML = resultat;
