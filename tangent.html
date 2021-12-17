@@ -54,12 +54,12 @@
 			<form>
 	
 				<td><label for="catet_op">Catet oposat:</label>
-				<input type="number" id="catet_op" name="catet_op" placeholder="Cat-O" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+				<input type="number" id="catet_op" name="catet_op" placeholder="Op" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
 
 				
 			<br>
 				<td><label for="catet_con">Catet contigu:</label>
-				<input type="number" id="catet_con" name="Catet_contigu" placeholder="Cat-C" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
+				<input type="number" id="catet_con" name="Catet_contigu" placeholder="Co" min="0" max="10" step="1" oninput="(validity.valid)||(value='');" onkeypress="if (event.keyCode <47 || event.keyCode > 57) return false" onkeypress="if(event.keyCode < 0 || event.keyCode > 200) return false;"></td>
 				
 			<br>
 				<td><input type="button" class="button" id="submit" name="submit" onclick = "tangent(document.getElementById('catet_con').value, document.getElementById('catet_op').value)" value="Calcula"></td>
