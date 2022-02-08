@@ -1,5 +1,4 @@
 
-
 llista_divisibles = []
 end = False
 inici = True
