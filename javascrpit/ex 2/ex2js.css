@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+body{
+	text-align: center;
+	margin-top: 100px;
+  font-family: 'Shippori Antique B1', sans-serif;
+  color: white;
+  background: rgb(9,9,121);
+  background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(255,0,192,1) 77%);
+}
+button{
+  background-color: #2b292a;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 15px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Shippori Antique B1', sans-serif;
+}
+input[type="number"]{
+  text-align: center;
+  color: white;
+  background-color: #4f4a4c;
+	border-radius: 8px;
+  size: 10px;
+	font-family: 'Shippori Antique B1', sans-serif;
+}
+h1{font-size: 27px;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

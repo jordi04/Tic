@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Comprovador de DNI</title>
+	<link rel="stylesheet" type="text/css" href="DNIchecker.css">
+</head>
+<body>
+<h1>Comprovador de DNI	</h1>
+<form>
+  Nombres: <input type="text" id="numerosDNI"name="DNI" onkeypress="return isNumberKey(event)" maxlength="8"><br> 
+  Lletra: <input type="text" id="lletraDNI" name="lletra" maxlength="1" onkeypress="return /[a-z]/i.test(event.key)">  
+
+</form>
+<button onclick="checking()">Comprova</button>
+<button onclick=location.reload()>Refresca</button>
+<br>
+<div id=result></div>
+
+<script>
+function checking(){
+
+const lletresDNI = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+var DNI = document.getElementById("numerosDNI").value;
+var lletra = document.getElementById("lletraDNI").value;
+lletra = lletra.toUpperCase();
+
+		var resultat = (lletresDNI[DNI%23]);
+
+		if (resultat === lletra) {
+			document.body.style.backgroundColor = "green";
+			document.getElementById("result").innerHTML = "El DNI és correcte";
+		}
+		else if(isNaN(DNI)){ //així he solucionat el bug dels accents
+			window.alert("El que has posat no és un nombre");
+		}
+		else{
+			document.body.style.backgroundColor = "red";
+			document.getElementById("result").innerHTML = "El DNI és incorrecte";
+		}
+		
+}
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if ((charCode < 47 || charCode > 57)){
+        return false;
+    }
+}
+</script>
+</body>
+</html>
