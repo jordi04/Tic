@@ -5,6 +5,7 @@ while run == True:
     while nombre_check == True:
         nombre = int(input("Insereix un nombre entre 1 i 10: "))
         if nombre >= 1 and nombre <= 10:
+            global file
             file = "taula-" + str(nombre) + ".txt"
             nombre_check = False
         else:
@@ -15,6 +16,7 @@ while run == True:
             doc = open(file, "r")
         except:
             print("El fitxer no existeix")
+            print(file)
             nombre_check = True
         else:
             print(doc.read())
